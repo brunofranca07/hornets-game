@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#00788c">
+    <title>Buzzword — Charlotte Hornets</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="game.js" defer></script>
+  </head>
+  <body>
+    <main class="game">
+      <header class="topbar">
+        <div class="brand-mark" aria-hidden="true">B</div>
+        <div>
+          <p class="eyebrow">CHARLOTTE HORNETS</p>
+          <h1>Buzzword</h1>
+        </div>
+        <button class="help-button" id="help-button" type="button" aria-label="Como jogar">?</button>
+      </header>
+
+      <nav class="tabs" role="tablist" aria-label="Seções do jogo">
+        <button class="tab active" id="game-tab" type="button" role="tab" aria-selected="true" aria-controls="game-view">Jogo</button>
+        <button class="tab" id="stats-tab" type="button" role="tab" aria-selected="false" aria-controls="stats-view" tabindex="-1">Estatísticas</button>
+      </nav>
+
+      <section id="game-view" role="tabpanel" aria-labelledby="game-tab">
+        <section class="intro" aria-labelledby="game-title">
+          <p id="game-title">A palavra de hoje tem tudo a ver com os Hornets.</p>
+          <p class="instructions" id="instructions">Descubra a palavra em até <strong>10 tentativas</strong>.</p>
+        </section>
+
+        <p class="message" id="message" role="status" aria-live="polite">Carregando jogo...</p>
+
+        <section class="board" id="board" aria-label="Tabuleiro de tentativas"></section>
+
+        <section class="keyboard" id="keyboard" aria-label="Teclado virtual"></section>
+      </section>
+
+      <section id="stats-view" role="tabpanel" aria-labelledby="stats-tab" hidden>
+        <div class="stats-heading">
+          <p class="eyebrow">SEU PROGRESSO</p>
+          <h2>Estatísticas</h2>
+          <p>Dados salvos neste navegador.</p>
+        </div>
+        <p class="stats-error" id="stats-error" role="status" aria-live="polite" hidden></p>
+        <section class="stats-grid" id="stats-grid" aria-label="Resumo das partidas"></section>
+        <section class="history-section" aria-labelledby="history-title">
+          <h3 id="history-title">Palavras que você acertou</h3>
+          <ul class="history-list" id="history-list"></ul>
+        </section>
+      </section>
+
+      <footer class="game-footer">
+        <span>Um novo desafio a cada dia</span>
+        <span class="footer-dot" aria-hidden="true">•</span>
+        <span>Go Hornets!</span>
+        <span class="footer-dot" aria-hidden="true">•</span>
+        <a class="social-link" href="https://twitter.com/criadecharlotte" target="_blank" rel="noopener noreferrer">@criadecharlotte</a>
+      </footer>
+    </main>
+
+    <dialog id="help-dialog" aria-labelledby="help-title">
+      <form method="dialog">
+        <button class="close-button" aria-label="Fechar">×</button>
+        <p class="eyebrow">REGRAS DO JOGO</p>
+        <h2 id="help-title">Como jogar</h2>
+        <p>Encontre a palavra relacionada ao Charlotte Hornets em até 10 tentativas. O número de letras pode mudar a cada dia.</p>
+        <p>Clique em qualquer casa da linha atual para escolher onde inserir a próxima letra. Também é possível navegar pelas casas usando as setas do teclado.</p>
+        <ul class="legend">
+          <li><span class="tile green">H</span><span>A letra está no lugar certo.</span></li>
+          <li><span class="tile yellow">O</span><span>A letra aparece em outra posição.</span></li>
+          <li><span class="tile gray">R</span><span>A letra não está na palavra.</span></li>
+        </ul>
+        <p>O desafio é o mesmo para todos durante o dia. Seu progresso fica salvo neste navegador.</p>
+        <button class="dialog-done" type="submit">Entendi</button>
+      </form>
+    </dialog>
+  </body>
+</html>
