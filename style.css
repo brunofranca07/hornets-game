@@ -10,7 +10,7 @@
   --teal: #00788c;
   --purple: #1d1160;
   --green: #72c9e6;
-  --yellow: #d94b55;
+  --yellow: #d7a928;
   --gray: #78838b;
 }
 
@@ -234,7 +234,7 @@ h1 {
 .tile.yellow {
   border-color: var(--yellow);
   background: var(--yellow);
-  color: white;
+  color: #302400;
 }
 
 .tile.gray {
@@ -297,7 +297,7 @@ h1 {
 
 .key.yellow {
   background: var(--yellow);
-  color: white;
+  color: #302400;
 }
 
 .key.gray {
